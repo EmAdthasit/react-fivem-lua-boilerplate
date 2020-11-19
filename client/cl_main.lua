@@ -1,6 +1,7 @@
 -- Example of how it works. Look at the `useCoreService`, and the nui function in `nui-events`
 
 RegisterCommand('show:nui', function(source, args, rawCommand)
+  SetNuiFocus( true, true )
   SendNUIMessage({
     app = "REACTNUI",
     method = "setVisibility",
@@ -9,9 +10,19 @@ RegisterCommand('show:nui', function(source, args, rawCommand)
 end, false)
 
 RegisterCommand('close:nui', function(source, args, rawCommand)
+  SetNuiFocus( false, false )
   SendNUIMessage({
     app = "REACTNUI",
     method = "setVisibility",
     data = false
+  })
+end, false)
+
+RegisterCommand('settext', function(source, args, rawCommand)
+  SetNuiFocus( true, true )
+  SendNUIMessage({
+    app = "REACTNUI",
+    method = "setText",
+    data = 'EmAdthasit'
   })
 end, false)

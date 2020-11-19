@@ -3,6 +3,10 @@ import { atom } from "recoil";
 export const coreState = {
   visibility: atom({
     key: "coreStateHidden",
-    default: true,
+    default: false,
+  }),
+  textState: atom({
+    key: "textState",
+    default: "",
   }),
 };

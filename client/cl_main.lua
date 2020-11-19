@@ -26,3 +26,13 @@ RegisterCommand('settext', function(source, args, rawCommand)
     data = 'EmAdthasit'
   })
 end, false)
+
+RegisterNUICallback("Close", function(data, cb)
+  SetNuiFocus( false, false )
+  SendNUIMessage({
+    app = "REACTNUI",
+    method = "setVisibility",
+    data = false
+  })
+  cb('OK')
+end)

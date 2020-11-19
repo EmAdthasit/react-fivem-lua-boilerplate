@@ -6,8 +6,10 @@ import { useNuiService } from "./nui-events/hooks/useNuiService";
 import { useVisibility } from "./core/hooks/useVisibility";
 import { useCoreService } from "./core/hooks/useCoreService";
 import Ambulance from "./components/ambulance";
-import { useRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import { coreState } from "./core/hooks/state";
+import Button from "@material-ui/core/Button";
+import Nui from "./nui-events/utils/Nui";
 
 function App() {
   const { visibility } = useVisibility();
@@ -18,6 +20,10 @@ function App() {
 
   const onChange = (event) => {
     setText(event.target.value);
+  };
+
+  const onClick = () => {
+    Nui.send('Close')
   };
 
   return (
@@ -35,6 +41,9 @@ function App() {
         <input type="text" value={text} onChange={onChange} />
         <br />
         Echo: {text}
+        <Button onClick={onClick} variant="contained" color="primary">
+          Close
+        </Button>
       </figure>
     </div>
   );

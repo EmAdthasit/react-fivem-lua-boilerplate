@@ -5,6 +5,53 @@
   font-family: 'Montserrat', sans-serif,
 }
 
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.ipad {
+  display: block;
+  color: #fff;
+  text-align: center;
+  font-family: "SF Pro Display", Helvetica Neue, Arial, sans-serif;
+  letter-spacing: -0.022em;
+  font-size: 3vmin;
+  /* text-shadow: 0 0 0.5em #000; */
+  /* background-color: #000; */
+  background-size: auto 200%, cover;
+  background-repeat: no-repeat, no-repeat;
+  border: solid #111;
+  margin-bottom: 2em;
+  position: relative;
+  box-shadow: 0 0.5em 2em 0.2em rgba(0, 0, 0, 0.33), 0 0 0 0.5px #000 inset;
+  transition: all 0.1s linear, line-height 0s linear;
+  /* background-position: 50% 100%, center; */
+  transform-origin: bottom center;
+}
+
+.ipad {
+  margin-left: 2em;
+  height: 60vmin;
+  width: 90.8vmin;
+  /* line-height: 85.8vmin; */
+  border-width: 3vmin;
+  border-radius: 4.2857142857vmin;
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0), #111),
+    url(https://www.apple.com/v/ipad-pro/s/images/overview/retina_screen_1__csuokryyjb42_large.jpg); */
+  z-index: 100;
+}
+
 h1 {
   font-family: 'Montserrat', sans-serif,
 }

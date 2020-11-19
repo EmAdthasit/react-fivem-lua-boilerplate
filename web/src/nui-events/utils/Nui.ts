@@ -1,7 +1,7 @@
 export default {
   async send(event, data = {}) {
     /* eslint-disable no-unreachable */
-    return fetch(`http://resource-name/${event}`, {
+    return fetch(`http://react/${event}`, {
       method: "post",
       headers: {
         "Content-type": "application/json; charset=UTF-8",

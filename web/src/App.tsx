@@ -13,6 +13,7 @@ function App() {
   return (
     <div style={ visibility ? { visibility: 'visible' } : { visibility: 'hidden' }}>
      {/** Any types of components goes here. Maybe some routing? */}
+     <h1>Hello World</h1>
     </div>
   );
 }
